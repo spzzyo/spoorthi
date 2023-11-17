@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400");
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display&family=Source+Sans+3:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Lora&family=Playfair+Display&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "montserrat";
+  color: #fff;
+}
+
+html,
+body {
+  height: 100%;
+
+  width: 100%;
+}
+
+
+body::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+  background: #c2970894;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+
+  border-radius: 50px;
+}
+body {
+  overflow-x: hidden;
+  background-color: #060101;
+}
+/* #cursor {
+  height: 20px;
+  width: 20px;
+  background-color: #95c11e;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 99;
+  transition: all linear 0.1s;
+} */
+
+a{
+  text-decoration: none;
+
+}
+
+#nav {
+  height: 130px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 120px;
+  gap: 50px;
+  position: fixed;
+  justify-content:center;
+  z-index: 999;
+}
+#nav img {
+  height: 4.5vw;
+}
+#nav h4 {
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1.15vw;
+}
+
+#page1 {
+  
+    height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+    background-image: url(media/team.png);
+    background-size:cover;
+    background-position: center center;
+  }
+
+  
+
+.row {
+    background-color: #060101;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em 1em;
+    text-align: center;
+    position: relative;
+  }
+  .column {
+    background-color: #060101;
+    width: 100%;
+    padding: 0 0;
+  }
+  h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3.5em;
+    color: #1f003b;
+  }
+  .card {
+    box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
+    padding: 2em 0.5em;
+    border-radius: 0.6em;
+    color: #1f003b;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #121212;
+  }
+  .card .img-container {
+    width: 10em;
+    height: 10em;
+    background-color: #ebe8e6;
+    padding: 0.5em;
+    border-radius: 50%;
+    margin: 0 auto 2em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+    display: block; /* Remove any default inline styling on the image */
+  }
+  
+  .card h3 {
+    font-weight: 500;
+  }
+  .card p {
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0.5em 0 2em 0;
+    letter-spacing: 2px;
+  }
+  .icons {
+    width: 50%;
+    min-width: 180px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .card a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.4em;
+  }
+  .card:hover {
+    background: linear-gradient(#ea9245, rgb(247, 228, 103));
+    color: #ffffff;
+  }
+  .card:hover .img-container {
+    transform: scale(1.15);
+  }
+  @media screen and (min-width: 768px) {
+    section {
+      padding: 1em 7em;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    section {
+      padding: 1em;
+    }
+    .card {
+      padding: 5em 1em;
+    }
+    .column {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+      padding: 0 1em;
+    }
+  }
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer-col {
+  width: 45%;
+  margin-bottom: 20px;
+}
+
+.footer-col h4 {
+  margin-bottom: 10px;
+}
+
+.social-link a {
+  color: #fff;
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.maps-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.maps-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-col {
+    width: 100%;
+  }
+}
