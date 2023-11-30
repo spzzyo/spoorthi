@@ -1,26 +1,4 @@
-var crsr = document.querySelector("#cursor");
-var blur = document.querySelector("#cursor-blur");
 
-document.addEventListener("mousemove", function (dets) {
-  crsr.style.left = dets.x + "px";
-  crsr.style.top = dets.y + "px";
-  blur.style.left = dets.x - 250 + "px";
-  blur.style.top = dets.y - 250 + "px";
-});
-
-var h4all = document.querySelectorAll("#nav h4");
-h4all.forEach(function (elem) {
-  elem.addEventListener("mouseenter", function () {
-    crsr.style.scale = 3;
-    crsr.style.border = "1px solid #fff";
-    crsr.style.backgroundColor = "transparent";
-  });
-  elem.addEventListener("mouseleave", function () {
-    crsr.style.scale = 1;
-    crsr.style.border = "0px solid #95C11E";
-    crsr.style.backgroundColor = "#95C11E";
-  });
-});
 
 gsap.to("#nav", {
   backgroundColor: "#000",
@@ -110,6 +88,74 @@ gsap.from("#page4 h1", {
     scrub: 3,
   },
 });
+
+
+(function () {
+  "use strict";
+
+  // define variables
+  var items = document.querySelectorAll(".timeline li");
+
+  // check if an element is in viewport
+  // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function callbackFunc() {
+    for (var i = 0; i < items.length; i++) {
+      if (isElementInViewport(items[i])) {
+        items[i].classList.add("in-view");
+      }
+    }
+  }
+
+  // listen for events
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("resize", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);
+})();
+
+
+
+// const checkpoints = gsap.utils.toArray(".checkpoint");
+
+// checkpoints.forEach(checkpoint => {
+//     gsap.from(checkpoint.firstElementChild, {
+//         height: 0,
+//         scrollTrigger: {
+//             trigger: checkpoint,
+//             start: "top+=100 center",
+//             end: "top+=300 center",
+//             scrub: true,
+//         }
+//     });
+// });
+
+// const checkpointTexts = gsap.utils.toArray(".text");
+
+// checkpointTexts.forEach(text => {
+//     gsap.from(text, {
+//         opacity: 0,
+//         x: 100,
+//         ease: "power2.inOut",
+//         scrollTrigger: {
+//             trigger: text.parentElement,
+//             start: "top+=50 center",
+//             end: "bottom+=340 center",
+//             toggleActions: "restart none none reverse",
+//         }
+//     })
+// })
+
+
 
 
 function setupImageSlider(container, imageBox, images) {

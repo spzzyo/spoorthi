@@ -32,6 +32,35 @@ body::-webkit-scrollbar-thumb {
 
   border-radius: 50px;
 }
+
+#preloader{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  z-index: 10000;
+  
+  opacity: 1; /* Initial opacity */
+  transition: opacity 0.5s ease;
+}
+
+
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 100vh;
+  width: 100vw;
+}
+
+.logo svg{
+
+  
+    width: 200px; /* Set the desired width */
+    height: 50x; /* Set the desired height */
+    position: relative;
+   
+  }
 body {
   overflow-x: hidden;
 }
@@ -50,6 +79,8 @@ a{
   text-decoration: none;
 
 }
+
+
 
 
 #nav {
@@ -127,68 +158,16 @@ svg{
   font-weight: 500;
   width: 40%;
 }
-#page1 #arrow {
-  height: 250px;
-  width: 250px;
-  background-color: transparent;
-  border: 2px solid #95c11e;
-  position: absolute;
-  display: flex;
-  left: -2%;
-  bottom: 0%;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: all ease 0.5s;
-}
-#page1 #arrow i {
-  font-size: 50px;
-  font-weight: 100;
-}
-#page1 #arrow:hover {
-  scale: 0.4;
-  background-color: #95c11e;
-}
+
 #page2 {
   min-height: 100vh;
   width: 100%;
   z-index: 10;
 }
 
-#scroller {
-  /* background-color: red; */
-  white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  position: relative;
-  z-index: 10;
-}
-#scroller::-webkit-scrollbar {
-  display: none;
-}
-#scroller-in {
-  display: inline-block;
-  white-space: nowrap;
-  animation-name: scroll;
-  animation-duration: 40s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
 
-#scroller h4 {
-  display: inline-block;
-  font-size: 80px;
-  font-weight: 900;
-  font-family: gilroy;
-  margin-right: 20px;
-  transition: all linear 0.3s;
-  color: #000;
-  -webkit-text-stroke: 2px #ffffff;
-}
-#scroller h4:hover {
-  color: #95c11e;
-  -webkit-text-stroke: 2px #95c11e;
-}
+
+
 
 @keyframes scroll {
   from {
@@ -200,33 +179,7 @@ svg{
 }
 
 
-#up_next {
-  background-color: transparent;
-  position: relative;
-  z-index: 0;
-}
 
-#agility {
-  height: 100%;
-  position: relative;
-  width: 100%;
-  overflow: hidden; /* Ensure the custom shape doesn't overflow */
-  z-index: 1;
-}
-
-.custom-shape-div {
-  position: absolute;
-  top: 0;
-  padding-top: 5vh;
-  right: 0; /* Position the div in the top right corner */
-  width: 60%; /* Adjust the width as needed */
-  height: 93.9%; /* Full height of the agility div */
-  background-size: cover;
-  background-image: url('Assests/agility_bg1.jpg');
-
-  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
-  z-index: -1; /* Ensure the custom shape is above the SVG */
-}
 
 
 #space{
@@ -337,7 +290,7 @@ svg{
     gap: 12px;
     justify-content: center;
     align-items: center;
-    padding: 25vh 50vw 25vh;
+    padding: 25vh 50vw 2vh;
 }
 
 .container-container{
@@ -479,96 +432,7 @@ svg{
 #card3 {
   background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
 }
-.overlay {
-  height: 100%;
-  width: 100%;
-  background-color: #95c11e;
-  padding: 30px;
-  padding-top: 160px;
-  opacity: 0;
-  transition: all ease 0.6s;
-}
-.overlay h4 {
-  color: #000;
-  font-size: 40px;
-  text-transform: uppercase;
-  white-space: nowrap;
-  margin-bottom: 20px;
-  font-weight: 800;
-}
-.overlay p {
-  color: #000;
-  font-size: 18px;
-}
-.card:hover .overlay {
-  opacity: 1;
-}
-.card:hover {
-  transform: rotate3d(-1, 1, 0, 20deg);
-}
 
-#green-div {
-  position: relative;
-  height: 30vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* background-color: red; */
-  background: linear-gradient(to left bottom, #119f3a, #ace022);
-}
-#green-div h4 {
-  width: 45%;
-  line-height: 50px;
-  color: #000;
-  text-align: center;
-  font-weight: 800;
-  font-size: 27px;
-  text-transform: uppercase;
-}
-#green-div img {
-  height: 100%;
-  object-fit: cover;
-  width: 14%;
-}
-
-#page3 {
-  height: 100vh;
-  width: 100%;
-  background-color: #000;
-  display: flex;
-  align-items: center;
-  position: relative;
-  justify-content: center;
-}
-#page3 > p {
-  font-size: 35px;
-  font-weight: 700;
-  width: 60%;
-  line-height: 45px;
-  text-align: center;
-}
-
-#page3 img {
-  position: absolute;
-  height: 60px;
-}
-#page3 #colon1 {
-  left: 15%;
-  top: 25%;
-}
-#page3 #colon2 {
-  bottom: 30%;
-  right: 15%;
-}
-#page4 {
-  height: 30vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 70px;
-  position: relative;
-}
 .elem {
   height: 70%;
   width: 26%;
@@ -616,6 +480,339 @@ svg{
 }
 
 
+.timeline h1{
+  padding-top: 10vh;
+  text-align: center;
+  background-color: #FFA500;
+}
+
+.timeline ul {
+  background: rgba(0, 0, 0, 0.39);
+  padding-bottom: 10vh;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #fff;
+}
+
+.timeline ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+  z-index: 1;
+}
+
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+ 
+  border:1px solid #6b6b6b;
+  
+  border-radius: 1em;
+  padding: 2em;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.timeline ul li div::before {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent rgb(254, 195, 57) transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div {
+  left: -439px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent rgb(254, 195, 57);
+}
+
+time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul li::after {
+  transition: background 0.5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+  background: rgb(254, 195, 57);
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+  }
+  .timeline ul li:nth-child(even) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 80px);
+  }
+  .timeline ul li:nth-child(even) div {
+    left: 45px;
+  }
+  .timeline ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent rgb(254, 195, 57) transparent transparent;
+  }
+}
+
+
+/* EXTRA/CLIP PATH STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline-clippy ul li::after {
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+}
+
+.timeline-rhombus ul li::after {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.timeline-rhombus ul li div::before {
+  bottom: 12px;
+}
+
+.timeline-star ul li::after {
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.timeline-heptagon ul li::after {
+  clip-path: polygon(
+    50% 0%,
+    90% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
+}
+
+.timeline-infinite ul li::after {
+  animation: scaleAnimation 2s infinite;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.25);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+
+/* .timeline {
+  border: 0.35rem solid;
+  margin: 5em auto;
+  max-width: 34.15em;
+}
+
+.timeline h1{
+  
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  width: 4px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.checkpoint{
+  height: 30em;
+  max-width: 34em;
+  padding: 1em 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+
+
+.checkpoint .text{
+  border: 1px solid #6b6b6b;
+  border-radius: 1em;
+  padding: 2em;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.checkpoint p {
+  line-height: 27px;
+  color: #fff;
+}
+
+.checkpoint:nth-child(odd) {
+  padding-left: 3em;
+  transform: translateX(17em);
+}
+
+.checkpoint:nth-child(even) {
+  padding-right: 3em;
+  transform: translateX(-17em);
+}
+
+.checkpoint:nth-child(odd) .text::before,
+.checkpoint:nth-child(even) .text::before {
+  content: '';
+  background: #fff;
+  width: 3em;
+  height: 3px;
+  position: absolute;
+  top: 20%;
+  transform: translateY(-50%);
+}
+
+.checkpoint:nth-child(odd) .text::before {
+  left: -3em;
+}
+
+.checkpoint:nth-child(even) .text::before {
+  right: -3em;
+}
+
+.checkpoint:nth-child(odd) .line {
+  left: -2px;
+}
+
+.checkpoint:nth-child(even) .line {
+  right: -2px;
+}
+
+.checkpoint:nth-child(odd) .text::after,
+.checkpoint:nth-child(even) .text::after {
+  content: '';
+  background: #fff;
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  top: 20%;
+  transform: translateY(-50%);
+}
+
+.checkpoint:nth-child(odd) .text::after {
+  left: -57px;
+}
+
+.checkpoint:nth-child(even) .text::after {
+  right: -57px;
+}
+
+
+@media screen and (max-width: 1150px) {
+  .timeline {
+      width: 80vw;
+  }
+  .timeline .checkpoint {
+      width: 100%;
+      transform: none;
+      padding-left: 0;
+      padding-right: 0;
+  }
+  .timeline .checkpoint .line{
+      right: initial;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  .timeline .checkpoint .text::before {
+      width: 3px;
+      height: 4em;
+      top: -4em;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  .timeline .checkpoint .text::after {
+      top: -4.5em;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+} */
 
 .footer {
   background-color: #333;
