@@ -3,7 +3,7 @@
 gsap.to("#nav", {
   backgroundColor: "#000",
   duration: 0.5,
-  height: "110px",
+  height: "90px",
   scrollTrigger: {
     trigger: "#nav",
     scroller: "body",
@@ -181,12 +181,13 @@ function setupImageSlider(container, imageBox, images) {
 
 const agilityContainer = document.querySelectorAll('.container')[0];
 const agilityImageBox = document.querySelector('.agility');
-const agilityImages = ['media/agility/img1.jpg', 'media/agility/img2.jpg', 'media/agility/img3.jpg', 'media/agility/img4.jpg', 'media/agility/img5.jpg', 'media/agility/img6.jpg'];
+// const agilityImages = ['media/agility/img1.jpg', 'media/agility/img2.jpg', 'media/agility/img3.jpg', 'media/agility/img4.jpg', 'media/agility/img5.jpg', 'media/agility/img6.jpg'];
+const agilityImages = ['media/SpoorthiCover.png'];
 
-setupImageSlider(agilityContainer, agilityImageBox, agilityImages);
+// setupImageSlider(agilityContainer, agilityImageBox, agilityImages);
 
 const spoorthiContainer = document.querySelectorAll('.container')[1];
 const spoorthiImageBox = document.querySelector('.spoorthi');
-const spoorthiImages = ['media/spoorthi/img1.jpg', 'media/spoorthi/img2.jpg', 'media/spoorthi/img3.jpg', 'media/spoorthi/img4.jpg', 'media/spoorthi/img5.jpg'];
+// const spoorthiImages = ['media/spoorthi/img1.jpg', 'media/spoorthi/img2.jpg', 'media/spoorthi/img3.jpg', 'media/spoorthi/img4.jpg', 'media/spoorthi/img5.jpg'];
 
-setupImageSlider(spoorthiContainer, spoorthiImageBox, spoorthiImages);
+// setupImageSlider(spoorthiContainer, spoorthiImageBox, spoorthiImages);
