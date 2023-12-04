@@ -21,6 +21,8 @@
 
   <body>
 
+    
+
     <div id = "preloader">
       <div class="logo">
       <svg  viewBox="0.00 0.00 117.00 125.00">
@@ -172,6 +174,8 @@
       </div>
      </div>
 
+     
+
     <div id="nav">
       <ul class="links">
       <li>
@@ -252,10 +256,9 @@
 
 
 
-
-    <video autoPlay playsInline muted loop> 
-      <source src='media/video.mp4'/>
-    </video>
+<video autoPlay playsInline muted loop> 
+  <source src='media/video.mp4'/>
+</video>  
 
     
     <div id="main">
@@ -866,50 +869,46 @@
           </div>
       </div>
 
-      
-
-
 
 
       <div class="container-container-mobile">
-        <div class="container">
-          <div class="image-container">   
-              <div class="image-box spoorthi "></div>
-              <!-- <div class="event">Spoorthi</div> -->
+                  <div class="container">
+                    <div class="image-container">   
+                        <div class="image-box spoorthi "></div>
+                        <!-- <div class="event">Spoorthi</div> -->
+                    </div>
+                <a href="spoorthi.html"><button type="submit" class="btn btn-primary">Know More</button></a>
+            </div>
+            
+
+            <div class="container">
+              <div class="image-container">   
+                  <div class="image-box marathon"></div>
+                  <!-- <div class="event">Marathon</div> -->
+              </div>
+              <a href="refinedForm.html"><button type="submit" class="btn btn-primary">Know More</button></a>
           </div>
-      <a href="spoorthi.html"><button type="submit" class="btn btn-primary">Know More</button></a>
-  </div>
-  
 
-  <div class="container">
-    <div class="image-container">   
-        <div class="image-box marathon"></div>
-        <!-- <div class="event">Marathon</div> -->
+
+          <div class="container">
+            <div class="image-container">   
+                <div class="image-box agility"></div>
+                <!-- <div class="event">Agility</div> -->
+            </div>
+            <a href="refinedForm.html"><button type="submit" class="btn btn-primary">Know More</button></a>
+          </div>
+
+          <div class="container">
+            <div class="image-container ">   
+                <div class="image-box trek"></div>
+                <!-- <div class="event">Mumbai University</div> -->
+            </div>
+            <a href="refinedForm.html"><button type="submit" class="btn btn-primary">Know More</button></a>
+          </div>     
     </div>
-    <a href="refinedForm.html"><button type="submit" class="btn btn-primary">Know More</button></a>
-</div>
 
 
-<div class="container">
-  <div class="image-container">   
-      <div class="image-box agility"></div>
-      <!-- <div class="event">Agility</div> -->
-  </div>
-  <a href="refinedForm.html"><button type="submit" class="btn btn-primary">Know More</button></a>
-</div>
 
-<div class="container">
-  <div class="image-container trek">   
-      <div class="image-box"></div>
-      <!-- <div class="event">Mumbai University</div> -->
-  </div>
-  <a href="refinedForm.html"><button type="submit" class="btn btn-primary">Know More</button></a>
-</div>
-
-
-        
-
-    </div>
     </div>
     
     
@@ -1001,35 +1000,13 @@
 
   </div>
 
+
+    <div id = "end_page">
+      <h1> HI</h1>
     </div>
 
-
-    <div class="footer">
-        <div class="footer-container">
-          <div class="footer-row">
-            <div class="footer-col">
-              <h4>Sports Committee</h4>
-              <div class = "social-link">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="fas fa-phone"></i></a>
-
-                </div>
-            </div>
-
-          
-            <div class="footer-col">
-              <h4>Find Us </h4>
-              
-                <div class="maps-container">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.6459337162796!2d72.83354047350537!3d19.123182650492982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9d90e067ba9%3A0x16268e5d6bca2e6a!2sBharatiya%20Vidya%20Bhavan&#39;s%20Sardar%20Patel%20Institute%20of%20Technology%20(SPIT)!5e0!3m2!1sen!2sin!4v1699726954489!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div> 
-        
+</div>
+ 
 
       
 
@@ -1048,6 +1025,33 @@
         })
   
       </script> 
+
+
+
+
+<script>
+ const body = document.body;
+const scrollWrap = document.getElementsById("main");
+const height = scrollWrap.getBoundingClientRect().height - 1;
+const speed = 0.04;
+
+var offset = 0;
+
+// Set body height only if it's smaller than the viewport height
+body.style.height = Math.floor(height) + "px";
+
+function smoothScroll() {
+  offset += (window.pageYOffset - offset) * speed;
+
+  var scroll = "translateY(-" + offset + "px) translateZ(0)";
+  scrollWrap.style.transform = scroll;
+
+  requestAnimationFrame(smoothScroll);
+}
+
+smoothScroll();
+
+</script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -1075,6 +1079,28 @@
   });
 </script>
 
+ <script>
+  document.addEventListener("DOMContentLoaded", function() {
+  var containerContainers = document.querySelectorAll('.container-container');
+
+  var observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  containerContainers.forEach(function(containerContainer) {
+    observer.observe(containerContainer);
+  });
+});
+
+ </script>
+
+
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
       integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
@@ -1088,5 +1114,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="script.js"></script>
+  
+  
   </body>
 </html>
