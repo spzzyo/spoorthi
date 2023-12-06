@@ -448,6 +448,14 @@ svg{
   transition: filter 1.3s; */
 }
 
+
+.spoorthi::before {
+  content: "";
+  display: none; /* hide the element */
+  background-image: url('media/spoorthicover.png');
+}
+
+
 .agility {
   background-image: url('media/agilitycover.png');
 }

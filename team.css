@@ -14,7 +14,21 @@
 html,
 body {
   height: 100%;
+
   width: 100%;
+  overscroll-behavior: none;
+}
+
+
+body::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+  background: #333;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+
+  border-radius: 50px;
 }
 
 #preloader{
@@ -37,7 +51,7 @@ body {
   width: 100vw;
 }
 
-svg{
+.logo svg{
 
   
     width: 200px; /* Set the desired width */
@@ -45,39 +59,16 @@ svg{
     position: relative;
    
   }
-
-body::-webkit-scrollbar {
-  display: block;
-  width: 8px;
-  background: #c2970894;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: #fff;
-
-  border-radius: 50px;
-}
 body {
   overflow-x: hidden;
-  background-color: #060101;
 }
-/* #cursor {
-  height: 20px;
-  width: 20px;
-  background-color: #95c11e;
-  border-radius: 50%;
-  position: fixed;
-  z-index: 99;
-  transition: all linear 0.1s;
-} */
 
-a{
-  text-decoration: none;
 
-}
 
 #nav {
   height: 130px;
   width: 100%;
+  /* background-color: red; */
   display: flex;
   align-items: center;
   padding: 0 120px;
@@ -86,36 +77,179 @@ a{
   justify-content:center;
   z-index: 999;
 }
+
+#nav li{
+  padding-top: 15px;
+  list-style: none;
+}
+
+#nav .links{
+  display: flex;
+  gap: 80px;
+} 
+
+
 #nav img {
-  height: 4.5vw;
+  vertical-align: top;
+  height: 60px;
+  
+  
 }
 #nav h4 {
   text-transform: uppercase;
   font-weight: 500;
   cursor: pointer;
-  font-size: 1.15vw;
+  font-size: 16px;
+}
+#nav a{
+  text-decoration: none;
+}
+#nav a:hover{
+  color: #FFA500;
+}
+ .toggle_btn{
+  display: none;
+  
+
+}
+.dropdown{
+  display: hidden;
+  position: fixed;
+  
+  top: 100px;
+  height: 0;
+  width: 300px;
+  background: rgba(31, 22, 5, 0.053);
+  backdrop-filter: blur(15px);
+  overflow: hidden;
+  transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+.dropdown.open{
+  height: 240px;
+  z-index: 999;
+}
+.dropdown li{
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#page1 {
-  
-    height: 120vh;
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    z-index: 10;
-    background-image: url(media/team.png);
-    background-size:cover;
-    background-position: center center;
+@media (max-width: 1025px) {
+
+  #nav li{
+    display: none;
   }
+
+  .dropdown a{
+    text-decoration: none;
+  }
+  #nav img{   
+    height: 50px;
+  }
+
+  .toggle_btn{
+
+    display:block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+  }
+
+  .dropdown{ 
+  width: 100%;
+
+  }
+
+  .dropdown a:hover{
+    text-decoration: underline;
+  }
+
+
+}
+.backcover {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-size:cover;
+  z-index: -1;
+}
+
+#main {
+position: relative;
+/* background-color: rgba(0, 0, 0, 0.39); */
+}
+
+#page_one{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 10;
+}
+
+
+.scroll_down{
+position: absolute;
+top: 80%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+}
+
+.scroll_down span{
+display: block;
+width: 20px;
+height: 20px;
+border-bottom: 2px solid white;
+border-right: 2px solid white;
+transform: rotate(45deg);
+margin: -10px;
+animation: animate 2s infinite;
+}
+
+.scroll_down span:nth-child(2)
+{
+animation-delay: -0.2s;
+}
+
+.scroll_down span:nth-child(3)
+{
+animation-delay: -0.4s;
+}
+
+@keyframes animate{
+
+0%{
+  opacity: 0;
+  transform: rotate(45deg) translate(-20px, -20px);
+}
+50%{
+  opacity: 1;
+}
+100%{
+  opacity: 0;
+  transform: rotate(45deg) translate(20px, 20px);
+}
+}
+
+#end_page{
+  /* background-color: #060101; */
+  
+  
+}
+
 
   
 
 .row {
-    background-color: #060101;
+    /* background-color: #060101; */
     display: flex;
     flex-wrap: wrap;
     padding: 1em 1em;
@@ -123,7 +257,7 @@ a{
     position: relative;
   }
   .column {
-    background-color: #060101;
+    /* background-color: #060101; */
     width: 100%;
     padding: 0 0;
   }
