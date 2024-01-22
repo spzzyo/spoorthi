@@ -136,6 +136,17 @@ body {
   justify-content: center;
 }
 
+.backcover {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-size:cover;
+  z-index: -1;
+  background-image: url(Assests/marathoncover.png);
+  background-position: center center;
+}
+
+
 @media (max-width: 1025px) {
 
   #nav li{
@@ -168,21 +179,18 @@ body {
   }
 
 
-}
-
-
-
-
-
-
-
-.backcover {
-    position: fixed;
-    height: 100vh;
-    width: 100%;
+  .backcover{
+    background-image: url(Assests/marathoncover_phone.png);
     background-size:cover;
-    z-index: -1;
+    background-position: center;
+  }
+
+
 }
+
+
+
+
 
 #main {
   position: relative;
@@ -275,7 +283,7 @@ body {
     color: #fff;
     font-size: 40px;
     margin-bottom: 50px;
-    z-index: -1;
+    
   }
   
   .content{
@@ -326,6 +334,14 @@ body {
   }
   
   @media (max-width: 1150px){
+
+    .sec-01{
+      width: 100%;
+      
+
+      padding: 50px 50px ;
+
+    }
     .content {
         flex-direction: column;
         width: 100%; /* Use 100% width for smaller screens */

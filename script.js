@@ -202,3 +202,22 @@ const achievementsImageBox = document.querySelector('.achievements');
 const achievementsImages = ['media/achievements/img1.jpg', 'media/achievements/img2.jpg', 'media/achievements/img3.jpg', 'media/achievements/img4.jpg', 'media/achievements/img5.jpg'];
 
 setupImageSlider(achievementsContainer, achievementsImageBox, achievementsImages);
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+const textElements = gsap.utils.toArray('.text');
+
+textElements.forEach(text => {
+  gsap.to(text, {
+    backgroundSize: '100%',
+    ease: 'none',
+    scrollTrigger: {
+      trigger: text,
+      start: 'center 80%',
+      end: 'center 20%',
+      scrub: true,
+    },
+  });
+});

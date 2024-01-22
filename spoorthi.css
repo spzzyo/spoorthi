@@ -136,6 +136,18 @@ body {
   justify-content: center;
 }
 
+.backcover {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-size:cover;
+  z-index: -1;
+  background-image: url(Assests/spoorthicover.png);
+  background-position: center center;
+
+
+}
+
 @media (max-width: 1025px) {
 
   #nav li{
@@ -156,6 +168,7 @@ body {
     cursor: pointer;
     right: 5%;
     top: 50%;
+    font-size: 24px;
   }
 
   .dropdown{ 
@@ -167,22 +180,22 @@ body {
     text-decoration: underline;
   }
 
-
-}
-
-
-
-
-
-
-
-.backcover {
-    position: fixed;
-    height: 100vh;
-    width: 100%;
+  .backcover{
+    background-image: url(Assests/spoorthicover_phone.png);
     background-size:cover;
-    z-index: -1;
+    background-position: center;
+  }
+
+
 }
+
+
+
+
+
+
+
+
 
 #main {
   position: relative;
@@ -562,9 +575,7 @@ padding-top: 10vh;
 }
 
 .register_now{
-  height: 200px;
-   
-  
+  height: 80px;
 }
 
 
@@ -598,13 +609,24 @@ padding-top: 10vh;
 }
 
 #about-us-in h3 {
+
   font-size: 3vw;
   /* font-weight: 800; */
   margin-bottom: 30px;
+  font-family: 'Impact', serif;
+  font-weight: 500;
+}
+
+#about-us-in h2 {
+
+  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 1000;
 }
 #about-us-in p {
   font-size: 20px;
   font-family: 'Josefin Sans', sans-serif;
+  margin-bottom: 30px;
 
 }
 
