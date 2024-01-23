@@ -176,7 +176,7 @@ body {
   width: 100%;
   background-size:cover;
   z-index: -1;
-  background-image: url(Assests/spoorthicover.png);
+  background-image: url(media/teamcover.png);
   background-position: center center;
 
 }
@@ -315,30 +315,31 @@ animation-delay: -0.4s;
   }
   .card {
     box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
-    padding: 2em 0.5em;
+    /* padding: 2em 0.5em; */
     border-radius: 0.6em;
     color: #1f003b;
     cursor: pointer;
     transition: 0.3s;
     background-color: #121212;
+    position: relative;
+    height: 50vh;
+
+    
   }
-  .card .img-container {
-    width: 10em;
-    height: 10em;
-    background-color: #ebe8e6;
-    padding: 0.5em;
-    border-radius: 50%;
-    margin: 0 auto 2em auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+ 
   
-  .card img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 50%;
-    display: block; /* Remove any default inline styling on the image */
+
+  
+  .card .titles{
+  
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 60%, rgba(0, 0, 0, 0) 100%);      padding: 20px;
+      box-sizing: border-box;
+      color: white; /* Set the text color to white */
+    
   }
   
   .card h3 {
@@ -366,7 +367,7 @@ animation-delay: -0.4s;
     background: linear-gradient(#ea9245, rgb(247, 228, 103));
     color: #ffffff;
   }
-  .card:hover .img-container {
+  .card:hover .titles {
     transform: scale(1.15);
   }
   @media screen and (min-width: 768px) {
