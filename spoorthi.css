@@ -266,7 +266,9 @@ body {
   display: flex;
 justify-content: center;
 align-items: center;
-padding-top: 10vh;
+padding-top: 25vh;
+
+
 /* background-color: #060101; */
 }
 
@@ -494,6 +496,10 @@ padding-top: 10vh;
   .blue:nth-child(2n)::before {
     background-image: linear-gradient(80deg, rgba(0, 118, 189, 0.1), transparent 50%);
  }
+
+
+
+
 }
 
 
@@ -553,8 +559,6 @@ padding-top: 10vh;
   width: 100%;
   margin-top: 10vh;
   display: inline-flex;
- 
-
   align-items: center;
   position: relative;
   z-index: 10;
@@ -570,7 +574,6 @@ padding-top: 10vh;
   padding: 5vh 10vw;
   border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
 	animation: borderRotate var(--d) linear infinite forwards;
-
  
 }
 
@@ -610,7 +613,7 @@ padding-top: 10vh;
 
 #about-us-in h3 {
 
-  font-size: 3vw;
+  font-size: 7vh;
   /* font-weight: 800; */
   margin-bottom: 30px;
   font-family: 'Impact', serif;
