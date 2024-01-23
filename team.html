@@ -193,7 +193,7 @@
        </a>
     
     <li>
-      <a href="#">
+      <a href="events.html">
         <h4>Our Events</h4>
       </a>
     </li>
@@ -232,7 +232,7 @@
     </a>
   </li>   
   <li>
-    <a href="#">
+    <a href="events.html">
       <h4>Our Events</h4>
     </a>
   </li>
@@ -249,7 +249,7 @@
 
 </div>
 
-<img class="backcover" src="media/teamcover.png" alt="">
+<img class="backcover" alt="">
 
     
 <div id="main">
@@ -1069,6 +1069,32 @@
       })
 
     </script>  
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const toggleBtnIcon = document.querySelector('.toggle_btn i');
+    const dropdwonMenu = document.querySelector('.dropdown');
+
+    toggleBtn.onclick = function () {
+      dropdwonMenu.classList.toggle('open');
+      const isOpen = dropdwonMenu.classList.contains('open');
+      toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars';
+    };
+
+    document.addEventListener('click', function (event) {
+      const isClickInsideDropdown = dropdwonMenu.contains(event.target);
+      const isClickOnToggleBtn = toggleBtn.contains(event.target);
+
+      if (!isClickInsideDropdown && !isClickOnToggleBtn) {
+        dropdwonMenu.classList.remove('open');
+        toggleBtnIcon.classList = 'fa-solid fa-bars';
+      }
+    });
+  });
+</script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"

@@ -421,11 +421,11 @@ padding-top: 10vh;
  }
   .postcard:nth-child(2n+1) .postcard__text::before {
     left: -12px !important;
-    transform: rotate(4deg);
+    transform: rotate(0deg);
  }
   .postcard:nth-child(2n+0) .postcard__text::before {
     right: -12px !important;
-    transform: rotate(-4deg);
+    transform: rotate(0deg);
  }
 }
 @media screen and (min-width: 1024px) {

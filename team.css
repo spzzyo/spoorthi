@@ -156,6 +156,7 @@ body {
     cursor: pointer;
     right: 5%;
     top: 50%;
+    font-size: 24px;
   }
 
   .dropdown{ 
@@ -175,7 +176,52 @@ body {
   width: 100%;
   background-size:cover;
   z-index: -1;
+  background-image: url(Assests/spoorthicover.png);
+  background-position: center center;
+
 }
+
+@media (max-width: 1025px) {
+
+  #nav li{
+    display: none;
+  }
+
+  .dropdown a{
+    text-decoration: none;
+  }
+  #nav img{   
+    height: 50px;
+  }
+
+  .toggle_btn{
+
+    display:block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    font-size: 24px;
+  }
+
+  .dropdown{ 
+  width: 100%;
+
+  }
+
+  .dropdown a:hover{
+    text-decoration: underline;
+  }
+
+  .backcover{
+    background-image: url(Assests/spoorthicover_phone.png);
+    background-size:cover;
+    background-position: center;
+  }
+
+
+}
+
 
 #main {
 position: relative;
