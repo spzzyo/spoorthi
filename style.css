@@ -19,14 +19,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Louis_George_Cafe_Italic, "montserrat";
+  font-family: "Josefin Sans", "montserrat";
   color: #fff;
 }
 
 html,
 body {
   height: 100%;
-
   width: 100%;
   overscroll-behavior: none;
 }
@@ -41,6 +40,10 @@ body::-webkit-scrollbar-thumb {
   background-color: #fff;
 
   border-radius: 50px;
+}
+::selection{
+  color: red;
+  background: white;
 }
 
 #preloader{
@@ -301,6 +304,7 @@ svg{
   font-weight: 800;
   margin-top: 0px;
   margin-bottom: 10px;
+  font-family: "Josefin Sans Bold ";
 }
 #page1 p {
   font-size: 1.2vw;
@@ -432,7 +436,6 @@ svg{
 #about-us-in p {
   font-size: 20px;
   font-family: 'Josefin Sans', sans-serif;
-
 }
 
 
@@ -472,7 +475,18 @@ svg{
   transition: transform 0.25s;
 }
 
-.image-container {
+.container-mobile {
+  position: relative;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  /* height: 50vh; */
+  width: 75vw;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.25s;
+}
+
+.image-container, .image-container-mobile {
   position: relative;
   height: 100%;
   width: 100%;
@@ -491,7 +505,7 @@ svg{
   transition: filter 1.3s;
 }
 
-.image-box {
+.image-box, .image-box-mobile {
   position: absolute;
   top: 0;
   left: 0;
@@ -521,6 +535,13 @@ svg{
 }
 
 .container:hover{
+  border: 2px;
+  border-color: black;
+  transform: scale(1.1);
+  z-index: 5;
+}
+
+.container-mobile:hover{
   border: 2px;
   border-color: black;
   transform: scale(1.1);
