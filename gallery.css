@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400");
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display&family=Source+Sans+3:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Lora&family=Playfair+Display&family=Source+Sans+3:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:900i');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "montserrat";
+  color: #ffffff;
+}
+
+html,
+body {
+  height: 100%;
+
+  width: 100%;
+  overscroll-behavior: none;
+  
+}
+
+
+body::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+  background: #333;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+
+  border-radius: 50px;
+}
+
+#preloader{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  z-index: 10000;
+  
+  opacity: 1; /* Initial opacity */
+  transition: opacity 0.5s ease;
+}
+
+
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 100vh;
+  width: 100vw;
+}
+
+.logo svg{
+
+  
+    width: 200px; /* Set the desired width */
+    height: 50x; /* Set the desired height */
+    position: relative;
+   
+  }
+body {
+  overflow-x: hidden;
+  background-color: black;
+}
+
+
+
+#nav {
+  height: 130px;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  padding: 0 120px;
+  gap: 50px;
+  position: fixed;
+  justify-content:center;
+  z-index: 999;
+}
+
+#nav li{
+  padding-top: 15px;
+  list-style: none;
+}
+
+#nav .links{
+  display: flex;
+  gap: 80px;
+} 
+
+
+#nav img {
+  vertical-align: top;
+  height: 60px;
+  
+  
+}
+#nav h4 {
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 16px;
+}
+#nav a{
+  text-decoration: none;
+}
+#nav a:hover{
+  color: #FFA500;
+}
+ .toggle_btn{
+  display: none;
+  
+
+}
+.dropdown{
+  display: hidden;
+  position: fixed;
+  
+  top: 100px;
+  height: 0;
+  width: 300px;
+  background: rgba(31, 22, 5, 0.053);
+  backdrop-filter: blur(15px);
+  overflow: hidden;
+  transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+.dropdown.open{
+  height: 240px;
+  z-index: 999;
+}
+.dropdown li{
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1025px) {
+
+  #nav li{
+    display: none;
+  }
+
+  .dropdown a{
+    text-decoration: none;
+  }
+  #nav img{   
+    height: 50px;
+  }
+
+  .toggle_btn{
+
+    display:block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+  }
+
+  .dropdown{ 
+  width: 100%;
+
+  }
+
+  .dropdown a:hover{
+    text-decoration: underline;
+  }
+}
+
+
+
+.notification {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  text-align: center;
+  z-index: 1;
+  background: #fffbbc;
+}
+
+h1 {
+  text-align: center;
+  padding: 0 15px;
+  margin-bottom: 24px;
+}
+
+.grid {
+  display: grid;
+  /* width: 90%; */
+  padding-top: 30vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  grid-gap: 8px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 30vw;
+  list-style: none;
+}
+
+.grid li:nth-child(9) {
+  grid-column: 1 / -1;
+  grid-row: span 2;
+}
+
+.grid figure,
+.grid img {
+  width: 100%;
+  height: 100%;
+}
+
+.grid img {
+  object-fit: cover;
+  background: #f5f3f4;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 850px) {
+  .grid {
+    grid-gap: 12px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 12vw;
+  }
+
+  .grid img{
+    border-radius: 13px;
+  }
+
+  .grid li:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .grid li:nth-child(2) {
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 2;
+  }
+
+  .grid li:nth-child(3) {
+    grid-column: 4;
+    grid-row: 1;
+  }
+
+  .grid li:nth-child(4) {
+    grid-column: 5;
+    grid-row: 1;
+  }
+
+  .grid li:nth-child(5) {
+    grid-column: 4;
+    grid-row: 2;
+  }
+
+  .grid li:nth-child(6) {
+    grid-column: 5;
+    grid-row: 2 / span 2;
+  }
+
+  .grid li:nth-child(7) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .grid li:nth-child(8) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .grid li:nth-child(9) {
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 2;
+  }
+
+  .grid li:nth-child(10) {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+  }
+
+  .grid li:nth-child(11) {
+    grid-column: 5;
+    grid-row: 4;
+  }
+}
