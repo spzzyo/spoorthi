@@ -158,50 +158,50 @@ gsap.from("#page4 h1", {
 
 
 
-function setupImageSlider(container, imageBox, images) {
-  let currentIndex = 0;
-  let intervalId;
+// function setupImageSlider(container, imageBox, images) {
+//   let currentIndex = 0;
+//   let intervalId;
 
-  function changeImage() {
-      imageBox.style.backgroundImage = `url(${images[currentIndex]})`;
-      currentIndex = (currentIndex + 1) % images.length;
-  }
+//   function changeImage() {
+//       imageBox.style.backgroundImage = `url(${images[currentIndex]})`;
+//       currentIndex = (currentIndex + 1) % images.length;
+//   }
 
-  function startImageChange() {
-      intervalId = setInterval(changeImage, 1500);
-  }
+//   function startImageChange() {
+//       intervalId = setInterval(changeImage, 1500);
+//   }
 
-  function stopImageChange() {
-      clearInterval(intervalId);
-  }
+//   function stopImageChange() {
+//       clearInterval(intervalId);
+//   }
 
-  container.addEventListener('mouseenter', startImageChange);
-  container.addEventListener('mouseleave', stopImageChange);
-}
+//   container.addEventListener('mouseenter', startImageChange);
+//   container.addEventListener('mouseleave', stopImageChange);
+// }
 
-const agilityContainer = document.querySelectorAll('.container')[0];
-const agilityImageBox = document.querySelector('.agility');
-const agilityImages = ['media/agility/img1.jpg', 'media/agility/img2.jpg', 'media/agility/img3.jpg', 'media/agility/img4.jpg', 'media/agility/img5.jpg', 'media/agility/img6.jpg'];
+// const agilityContainer = document.querySelectorAll('.container')[0];
+// const agilityImageBox = document.querySelector('.agility');
+// const agilityImages = ['media/agility/img1.jpg', 'media/agility/img2.jpg', 'media/agility/img3.jpg', 'media/agility/img4.jpg', 'media/agility/img5.jpg', 'media/agility/img6.jpg'];
 
-setupImageSlider(agilityContainer, agilityImageBox, agilityImages);
+// setupImageSlider(agilityContainer, agilityImageBox, agilityImages);
 
-const spoorthiContainer = document.querySelectorAll('.container')[1];
-const spoorthiImageBox = document.querySelector('.spoorthi');
-const spoorthiImages = ['media/spoorthi/img1.jpg', 'media/spoorthi/img2.jpg', 'media/spoorthi/img3.jpg', 'media/spoorthi/img4.jpg', 'media/spoorthi/img5.jpg'];
+// const spoorthiContainer = document.querySelectorAll('.container')[1];
+// const spoorthiImageBox = document.querySelector('.spoorthi');
+// const spoorthiImages = ['media/spoorthi/img1.jpg', 'media/spoorthi/img2.jpg', 'media/spoorthi/img3.jpg', 'media/spoorthi/img4.jpg', 'media/spoorthi/img5.jpg'];
 
-setupImageSlider(spoorthiContainer, spoorthiImageBox, spoorthiImages);
+// setupImageSlider(spoorthiContainer, spoorthiImageBox, spoorthiImages);
 
-const marathonContainer = document.querySelectorAll('.container')[0];
-const marathonImageBox = document.querySelector('.marathon');
-const marathonImages = ['media/marathon/img1.jpg', 'media/marathon/img2.jpg', 'media/marathon/img3.jpg', 'media/marathon/img4.jpg', 'media/marathon/img5.jpg', 'media/marathon/img6.jpg'];
+// const marathonContainer = document.querySelectorAll('.container')[0];
+// const marathonImageBox = document.querySelector('.marathon');
+// const marathonImages = ['media/marathon/img1.jpg', 'media/marathon/img2.jpg', 'media/marathon/img3.jpg', 'media/marathon/img4.jpg', 'media/marathon/img5.jpg', 'media/marathon/img6.jpg'];
 
-setupImageSlider(marathonContainer, marathonImageBox, marathonImages);
+// setupImageSlider(marathonContainer, marathonImageBox, marathonImages);
 
-const achievementsContainer = document.querySelectorAll('.container')[0];
-const achievementsImageBox = document.querySelector('.achievements');
-const achievementsImages = ['media/achievements/img1.jpg', 'media/achievements/img2.jpg', 'media/achievements/img3.jpg', 'media/achievements/img4.jpg', 'media/achievements/img5.jpg'];
+// const achievementsContainer = document.querySelectorAll('.container')[0];
+// const achievementsImageBox = document.querySelector('.achievements');
+// const achievementsImages = ['media/achievements/img1.jpg', 'media/achievements/img2.jpg', 'media/achievements/img3.jpg', 'media/achievements/img4.jpg', 'media/achievements/img5.jpg'];
 
-setupImageSlider(achievementsContainer, achievementsImageBox, achievementsImages);
+// setupImageSlider(achievementsContainer, achievementsImageBox, achievementsImages);
 
 
 

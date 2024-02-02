@@ -250,7 +250,7 @@ svg{
 }
 
 #page1 .container .text {
-  font-size: 9vw;
+  font-size: 8vw;
   letter-spacing: .01em;
   line-height: 100%;
   margin: 0;
@@ -310,7 +310,7 @@ svg{
 
 #page1 h2 {
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 600;
   margin-top: 0px;
   margin-bottom: 10px;
 
@@ -478,7 +478,7 @@ svg{
 .container {
   position: relative;
   height: 50vh;
-  width: 45vw;
+  width: 40vw;
   overflow: hidden;
   border-radius: 8px;
   transition: transform 0.25s;
@@ -529,19 +529,18 @@ svg{
 
 .agility {
   background-image: url('media/agility/img1.jpg');
+  background-position: center;
 }
 
 .spoorthi {
-  background-image: url('media/spoorthi/img1.jpg');
+  background-image: url('media/spoorthi/img5.jpg');
 }
 
 .marathon {
-  background-image: url('media/marathon/img1.jpg');
+  background-image: url('media/marathon/img9.jpg');
 }
 
-.achievements {
-  background-image: url('media/achievements/img1.jpg');
-}
+
 
 .container:hover{
   border: 2px;
@@ -563,7 +562,7 @@ svg{
 
 .image-container:hover .overlay{
   filter: blur(3px);
-  filter: opacity(50%);
+  filter: opacity(80%);
 }
 
 
@@ -937,14 +936,14 @@ time {
 } */
 
 /* --------------------------- FOOTER --------------------------- */
-footer {
+/* footer {
   background-color: #111;
   color: #fff;
   padding: 20px 10px;
   font-family: 'Louis_George_Cafe_Italic', sans-serif !important;
-}
+} */
 
-.footer-container {
+/* .footer-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -960,8 +959,7 @@ footer {
 }
 
 .footer-col {
-  width: 48%; /* Each column takes up 48% to leave some space between them */
-  text-align: center;
+  width: 48%; 
   margin-bottom: 20px;
 }
 
@@ -998,7 +996,7 @@ footer {
   width: 100%;
   height: 200px;
   border-radius: 5px;
-}
+} */
 
 .committee-name {
   text-align: center;
