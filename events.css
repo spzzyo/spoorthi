@@ -577,13 +577,14 @@ animation-delay: -0.4s;
 
 .text_mask {
   width: 40%;
-  height: 85%;
+  
   position: relative;
   z-index: 2;
   /* margin-top: 5%;
   margin-left: 5%; */
   margin: 5%;
   background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
   padding: 20px; /* Added padding for better spacing */
   border-radius: 10px; /* Rounded corners */
   color: white; /* Text color */
@@ -647,7 +648,7 @@ animation-delay: -0.4s;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 375px;
+    
     width: 85vw;
     margin-top: 0;
     flex-direction: row;
@@ -655,16 +656,17 @@ animation-delay: -0.4s;
     position: relative; /* Use absolute positioning */
    
    
-    transform: translateY(-10%);
+    transform: translateY(-20%);
 
   }
 
   .text_mask{
     width: 90%;
-    height: 90%;
+    
     position: relative;
+    display: inline-block;
     z-index: 2;
-    background-color: rgba(255, 255, 255, 0.192);
+    background-color: rgba(45, 43, 43, 0.29);
   backdrop-filter: blur(5px);
     padding: 20px; /* Added padding for better spacing */  
     color: white; /* Text color */
