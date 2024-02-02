@@ -595,7 +595,7 @@ animation-delay: -0.4s;
 .text_mask h4 {
  
   margin-bottom: 15px; /* Reduced margin for better spacing */
-  font-family: 'Impact', serif;
+  font-family: 'Anton', serif;
   font-weight: 300;
 }
 
@@ -603,6 +603,7 @@ animation-delay: -0.4s;
   font-size: 1.2em; /* Changed from 20px for better readability */
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 700; /* Adjusted font weight */
+  
 }
 
 .text_mask p {
