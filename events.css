@@ -444,7 +444,7 @@ body {
   }
 
   .backcover{
-    background-image: url(media/events.png);
+    background-image: url(Assests/events_phone.png);
     background-size:cover;
     background-position: center;
   }
