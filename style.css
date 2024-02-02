@@ -481,8 +481,7 @@ svg{
   letter-spacing: .01em;
   line-height: 100%;
   margin: 0;
-  font-family: 'Impact', serif;
-  
+  font-family: 'Anton', sans-serif;
   width: 100%;
   background: linear-gradient(to right, #b6b6b6, #b6b6b6) no-repeat;
   -webkit-background-clip: text;
@@ -505,7 +504,7 @@ svg{
   height: 100%;
   background-color: #e31818;
   color: #fffdfd;
-  font-family: 'Impact', serif;
+  font-family:  'Anton', sans-serif;
   clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
   transform-origin: center;
   transition: all cubic-bezier(.1,.5,.5,1) 0.4s;
