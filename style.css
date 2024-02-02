@@ -19,7 +19,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Josefin Sans", "montserrat";
+  font-family: "montserrat";
   color: #fff;
 }
 
@@ -56,7 +56,16 @@ body::-webkit-scrollbar-thumb {
   opacity: 1; /* Initial opacity */
   transition: opacity 0.5s ease;
 }
-
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #000000;
+  text-align: center;
+  z-index: 100;
+}
 
 .logo{
   display: flex;
@@ -304,7 +313,7 @@ svg{
   font-weight: 800;
   margin-top: 0px;
   margin-bottom: 10px;
-  font-family: "Josefin Sans Bold ";
+
 }
 #page1 p {
   font-size: 1.2vw;

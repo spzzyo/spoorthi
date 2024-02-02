@@ -63,7 +63,122 @@ body {
   overflow-x: hidden;
 }
 
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #000000;
+  text-align: center;
+  z-index: 10;
+  height: 5%;
+  
+}
 
+.socials {
+  display: inline-block;
+  position:absolute;
+  top:50%;
+  left:50%;
+  -ms-transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+  
+
+}
+
+/* Icons */
+
+.socials a {
+  color:#fff;
+  
+  border-radius:4px;
+  text-align:center;
+  text-decoration:none;
+  font-family:fontawesome;
+  position: relative;
+  display: inline-block;
+  width:40px;
+  height:50px;
+  padding-top:3px;
+
+  margin:0 2px;
+  -o-transition:all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+   -webkit-font-smoothing: antialiased;
+}
+
+.socials a:hover {
+  background: #ef92a3;
+}
+
+/* pop-up text */
+
+.socials a span {
+  color:#666;
+  position:absolute;
+  font-family:sans-serif;
+  bottom:0;
+  left:-25px;
+  right:-25px;
+  padding:5px 7px;
+  z-index:-1;
+  font-size:14px;
+  border-radius:2px;
+  background:#fff;
+  visibility:hidden;
+  opacity:0;
+  -o-transition:all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* pop-up text arrow */
+
+.socials a span:before {
+  content:'';
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  position:absolute;
+  bottom:-5px;
+  left:40px;
+}
+
+/* text pops up when icon is in hover state */
+
+.socials a:hover span {
+  bottom:50px;
+  visibility:visible;
+  opacity:1;
+}
+
+/* font awesome icons */
+
+.socials a:nth-of-type(1):before {
+content:'\f16d';
+}
+ .socialsa:nth-of-type(2):before {
+content:"\f0e1";
+}
+.socials a:nth-of-type(3):before {
+content:'\f0d5';
+}
+.socials a:nth-of-type(4):before {
+content:'\f113';
+}
+.socials a:nth-of-type(5):before {
+content:'\f17d';
+}
+.socials a:nth-of-type(6):before {
+content:'\f1cb';
+}
 
 #nav {
   height: 130px;
@@ -259,111 +374,167 @@ body {
     
     
 }
+.glow-in-the-dark-button {
+  padding: 15px 30px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-in-the-dark-button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #801853;
+  opacity: .5;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease;
+}
+
+.glow-in-the-dark-button:hover {
+  background-color: #555;
+}
+
+.glow-in-the-dark-button:hover::before {
+  transform: translate(-50%, -50%) scale(1.5);
+}
 
 
-.sec-01{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 100px;
-    color: #fff;
+
+
+  
+
+  @property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+
+
+
+
+  :root {
+    --d: 6500ms;
+    --angle: 90deg;
+    --gradX: 100%;
+    --gradY: 50%;
+    --c1: #930190;   /* Fire Color 1 (Red) */
+    --c2: rgba(186, 0, 189, 0.129);
   }
   
-  .container{
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
   
-  .main-title, .section-title{
-    margin-top: 10px;
-    color: #fff;
-    font-size: 40px;
-    margin-bottom: 50px;
+  #about-us {
     
-  }
-  
-  .content{
-    position: relative;
-    width: 1150px; /* Add a max-width to keep it from stretching too wide on larger screens */
-    justify-content: center;
-    display: flex;
-    align-items: center;
-  }
-  
-  .content .image{
-    display: flex;
-    position: relative;
-    width: 70%;
-    height: 400px;
-    overflow: hidden;
-    
-  }
-  
-  .content .image img{
-    z-index: 111;
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: 100vh;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
-  .content .text-box{
-    /* padding-left: 20px; */
-    z-index: 222;
-    display: flex;
+    margin-top: 10vh;
+    display: inline-flex;
+    align-items: center;
     position: relative;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    padding: 40px;
-    max-width: 500px;
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 10px;
-    transform: translate(-80px, 50px)
+    z-index: 10;
+    justify-content: space-around;
   }
   
-  .content .text-box h3{
+  
+  #about-us-in {
+    width: 80%;
+    text-align: center;
+    margin: 20px; /* Add margin here */
+    border: 0.15em solid;
+    padding: 5vh 10vw;
+    border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+    animation: borderRotate var(--d) linear infinite forwards;
+   
+  }
+  
+  .register_now{
+    height: 80px;
+  }
+  
+  
+  @keyframes borderRotate {
+    100% {
+      --angle: 420deg;
+    }
+  }
+  
+  @keyframes borderRadial {
+    20% {
+      --gradX: 100%;
+      --gradY: 50%;
+    }
+    40% {
+      --gradX: 100%;
+      --gradY: 100%;
+    }
+    60% {
+      --gradX: 50%;
+      --gradY: 100%;
+    }
+    80% {
+      --gradX: 0%;
+      --gradY: 50%;
+    }
+    100% {
+      --gradX: 50%;
+      --gradY: 0%;
+    }
+  }
+  
+  #about-us-in h3 {
+  
+    font-size: 7vh;
+    /* font-weight: 800; */
+    margin-bottom: 30px;
+    font-family: 'Impact', serif;
+    font-weight: 500;
+  }
+  
+  #about-us-in h2 {
+  
     font-size: 20px;
-    margin-bottom: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 1000;
   }
+  #about-us-in p {
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 30px;
   
-  @media (max-width: 1150px){
-
-    .sec-01{
-      width: 100%;
-      
-
-      padding: 50px 50px ;
-
-    }
-    .content {
-        flex-direction: column;
-        width: 100%; /* Use 100% width for smaller screens */
-        max-width: 100%; /* Use 100% width for smaller screens */
-        margin-top: 0; /* Add some space between image and text on smaller screens */
-    }
-  
-    .content .image,
-    .content .text-box {
-        width: 100%;
-    }
-  
-    .content .text-box::before {
-      margin-top: 0; /* Remove the margin-top on smaller screens */
-      transform: none; /* Remove the translation on smaller screens */
   }
-  
-    .content .text-box {
-        margin-top: 0; /* Remove the margin-top on smaller screens */
-        transform: none; /* Remove the translation on smaller screens */
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
     }
   }
+
+
+
+
   
 
 #our_events{
@@ -375,28 +546,21 @@ padding-top: 10vh;
 }
 
 
+
+
 .dark {
   font-family: "Baloo 2", cursive;
   font-size: 16px;
   color: #fff;
   text-rendering: optimizeLegibility;
   font-weight: initial;
+  margin-bottom: 100px;
   /* background-color: #060101; */
 }
 
 
 
-.sec-02{
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-  }
-  
-  .sec-02 h2{
-    text-align: center;
-  }
-  
+
   
   .postcard {
     flex-wrap: wrap;
@@ -435,7 +599,8 @@ padding-top: 10vh;
     text-decoration: none;
   }
   .postcard .postcard__img {
-    max-height: 80px;
+    height: 300px;
+  
     width: 100%;
     object-fit: cover;
     position: relative;
@@ -445,7 +610,7 @@ padding-top: 10vh;
   }
   
   .postcard img {
-    flex-shrink: 0; /* To prevent the image from shrinking */
+    
     width: 100%; /* Adjust as needed */
   }
   
@@ -458,7 +623,7 @@ padding-top: 10vh;
     transition: width 0.2s ease;
   }
   .postcard .postcard__text {
-    padding: 1.5rem;
+    padding: 1rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -469,6 +634,7 @@ padding-top: 10vh;
     text-align: justify;
     height: 100%;
   }
+ 
   .postcard .postcard__tagbox {
     display: flex;
     flex-flow: row wrap;
