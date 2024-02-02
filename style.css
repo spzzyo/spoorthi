@@ -473,10 +473,11 @@ svg{
   justify-content: center;
   align-items: flex-start;
   height: 200vh;
+  width: 75vw;
 }
 
 #page1 .container .text {
-  font-size: 8vw;
+  font-size: 100px;
   letter-spacing: .01em;
   line-height: 100%;
   margin: 0;
