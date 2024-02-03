@@ -370,7 +370,7 @@ body {
 
 .dropdown{
   display: hidden;
-  position: absolute;
+  position: fixed;
   
   top: 100px;
   height: 0;
