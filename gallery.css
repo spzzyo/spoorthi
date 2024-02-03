@@ -107,8 +107,8 @@ body {
 #nav a{
   text-decoration: none;
 }
-#nav a:hover{
-  color: #FFA500;
+#nav h4:hover{
+  color: #d38966;
 }
  .toggle_btn{
   display: none;
