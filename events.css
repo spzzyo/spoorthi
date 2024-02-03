@@ -637,7 +637,7 @@ animation-delay: -0.4s;
     
   }
   .flex-container .column{
-    height: 400px;
+    height: 440px;
   }
 
   .flex-container .column:nth-child(2) {
@@ -668,7 +668,7 @@ animation-delay: -0.4s;
     z-index: 2;
     background-color: rgba(45, 43, 43, 0.29);
   backdrop-filter: blur(5px);
-    padding: 20px; /* Added padding for better spacing */  
+    padding: 10px; /* Added padding for better spacing */  
     color: white; /* Text color */
     overflow: hidden; /* Hide overflowing content */
     margin: auto;
