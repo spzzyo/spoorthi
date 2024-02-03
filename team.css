@@ -514,8 +514,6 @@ animation-delay: -0.4s;
   
 }
 
-
-  
 .centered-container {
   width: 100%;
   text-align: center;
@@ -533,6 +531,16 @@ animation-delay: -0.4s;
   min-height: 100vh;
 }
 
+  
+
+/* .row {
+    /* background-color: #060101; */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em 1em;
+    text-align: center;
+    position: relative;
+  } */
   .column {
     /* background-color: #060101; */
     width: 100%;
