@@ -516,15 +516,23 @@ animation-delay: -0.4s;
 
 
   
+.centered-container {
+  width: 100%;
+  text-align: center;
+  padding: 1em 0;
+}
 
 .row {
-    /* background-color: #060101; */
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1em 1em;
-    text-align: center;
-    position: relative;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em 1em;
+  text-align: center;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
   .column {
     /* background-color: #060101; */
     width: 100%;
