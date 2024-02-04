@@ -61,7 +61,8 @@ body::-webkit-scrollbar-thumb {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1rem;
+  padding: 0.5rem;
+  font-size: 10px;
   background-color: #000000;
   text-align: center;
   z-index: 100;
