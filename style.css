@@ -681,16 +681,14 @@ svg{
     gap: 12px;
     justify-content: center;
     align-items: center;
-    padding: 25vh 50vw;
+    padding: 10vh 50vw;
 }
 
 .container-container {
   display: flex;
   flex-direction: row;
   gap: 12px;
-  opacity: 0; /* Start with opacity 0 */
-  transform: translateY(20px); /* Start slightly below its actual position */
-  transition: opacity 0.5s, transform 0.5s; /* Add transition for smooth effect */
+
 }
 
 .container-container.visible {
@@ -760,11 +758,15 @@ svg{
 }
 
 .spoorthi {
-  background-image: url('media/spoorthi/img5.jpg');
+  background-image: url('media/spoorthi/img4.jpg');
 }
 
 .marathon {
-  background-image: url('media/marathon/img9.jpg');
+  background-image: url('media/marathon/img3.jpg');
+}
+
+.achievements {
+  background-image: url('media/achievements/img1.jpg');
 }
 
 
