@@ -32,4 +32,9 @@ This repository contains information, updates, and resources related to the Spor
 
 
 ## Contact
-Email: sportscommittee@spit.ac.in
+Email: yoshita.singh@spit.ac.in
+       pranav.shirole22@spit.ac.in
+
+
+      
+
