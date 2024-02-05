@@ -29,3 +29,7 @@ This repository contains information, updates, and resources related to the Spor
 ![Screenshot 2024-02-05 141152](https://github.com/spzzyo/spoorthi/assets/132225926/0a1b4a29-eb31-4857-a404-8070c032a9f2)
 # Team
 ![Screenshot 2024-02-05 141212](https://github.com/spzzyo/spoorthi/assets/132225926/50d5a9fc-34c9-4a56-b431-e89c97dfd20e)
+
+
+## Contact
+Email: sportscommittee@spit.ac.in
